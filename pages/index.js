@@ -22,24 +22,32 @@ const Home = () => {
             </p>
             <p className="mt-8">
               You can even view your past trips to recall items back into your
-              shopping list, and get a summary of your shopping trip when you're
-              done. For those times when you didn't find everything you needed,
-              GroceryTime allows you to quickly move it over to your next trip.
+              shopping list, and get a summary of your trip when you're done
+              shopping.
+            </p>
+            <p className="mt-8">
+              And, for those times when you didn't find everything you needed,
+              GroceryTime allows you to move those items right over to your next
+              trip.
             </p>
           </>
         }
-        imageName="Device"
+        imageName="StoreView"
         bgColor="bg-red-600"
       />
 
       <Feature
-        heading="Share and shop together"
+        heading="Share and plan together"
         body={
           <>
-            <p>Invite anyone and plan groceries together. It's that simple.</p>
+            <p>
+              Invite anyone by email address and plan your groceries together in
+              a shared list. It's that simple.
+            </p>
           </>
         }
-        imageName="Device"
+        imageName="ShareView"
+        imagePos="right"
         bgColor="bg-black"
       />
     </>

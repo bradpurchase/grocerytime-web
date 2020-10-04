@@ -19,7 +19,7 @@ const Hero = React.memo(() => {
           disabled
           class="rounded-full bg-red-600 hover:bg-red-700 text-white text-md lg:text-xl py-4 px-10 w-full md:w-1/3 lg:w-auto"
         >
-          Coming very soon 👀
+          Coming soon 👀
         </button>
       </div>
     </div>
