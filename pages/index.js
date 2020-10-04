@@ -46,7 +46,7 @@ const Home = () => {
             </p>
           </>
         }
-        imageName="ShareView"
+        imageName="ShareStoreView"
         imagePos="right"
         bgColor="bg-black"
       />
