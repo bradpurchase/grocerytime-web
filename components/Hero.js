@@ -5,7 +5,7 @@ const Hero = React.memo(() => {
     <div className="px-20 py-12 bg-white">
       <div className="mb-10 flex w-full text-center justify-center">
         <Link href="/">
-          <img src="/images/icon.svg" className="h-20" />
+          <img src="/images/Icon.svg" className="h-20" />
         </Link>
       </div>
       <div className="flex flex-col text-center items-center">
