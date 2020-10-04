@@ -1,65 +1,49 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+import Hero from "../components/Hero";
+import Feature from "../components/Feature";
 
-export default function Home() {
+const Home = () => {
   return (
-    <div className={styles.container}>
+    <>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>GroceryTime: Shared Grocery List App for iPhone and iPad</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
-        </h1>
+      <Hero />
 
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
+      <Feature
+        heading="Organize your grocery shopping"
+        body={
+          <>
             <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
+              Plan each trip to the grocery store separately, whether you shop
+              for groceries every day or once per week.
             </p>
-          </a>
-        </div>
-      </main>
+            <p className="mt-8">
+              You can even view your past trips to recall items back into your
+              shopping list, and get a summary of your shopping trip when you're
+              done. For those times when you didn't find everything you needed,
+              GroceryTime allows you to quickly move it over to your next trip.
+            </p>
+          </>
+        }
+        imageName="Device"
+        bgColor="bg-red-600"
+      />
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
-      </footer>
-    </div>
-  )
-}
+      <Feature
+        heading="Share and shop together"
+        body={
+          <>
+            <p>Invite anyone and plan groceries together. It's that simple.</p>
+          </>
+        }
+        imageName="Device"
+        bgColor="bg-black"
+      />
+    </>
+  );
+};
+
+export default Home;
