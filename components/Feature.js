@@ -30,7 +30,7 @@ const Feature = React.memo(
                   </h2>
                   <div className="text-xl leading-relaxed">{body}</div>
                 </div>
-                <picture className="object-fit mt-10 lg:mt-0 lg:ml-16 w-full">
+                <picture className="object-fit mb-10 lg:mb-0 lg:ml-16 w-full">
                   <source
                     srcset={`/images/${imageName}-dark.png`}
                     media="(prefers-color-scheme: dark)"
