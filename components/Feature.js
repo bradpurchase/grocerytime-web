@@ -10,7 +10,7 @@ const Feature = React.memo(
               <>
                 <picture className="object-fit mt-10 lg:mt-0 lg:mr-16 w-full">
                   <source
-                    srcset={`/images/${imageName}-dark.png`}
+                    srcSet={`/images/${imageName}-dark.png`}
                     media="(prefers-color-scheme: dark)"
                   />
                   <img src={`/images/${imageName}.png`} />
@@ -32,7 +32,7 @@ const Feature = React.memo(
                 </div>
                 <picture className="object-fit mb-10 lg:mb-0 lg:ml-16 w-full">
                   <source
-                    srcset={`/images/${imageName}-dark.png`}
+                    srcSet={`/images/${imageName}-dark.png`}
                     media="(prefers-color-scheme: dark)"
                   />
                   <img src={`/images/${imageName}.png`} />
