@@ -1,14 +1,14 @@
-import '../styles/globals.css'
+import "../styles/globals.css";
 
-import Footer from '../components/Footer'
+import Footer from "../components/Footer";
 
-function MyApp({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
-    <>
+    <div className="bg-white dark:bg-black text-black dark:text-white">
       <Component {...pageProps} />
       <Footer />
-    </>
-  )
+    </div>
+  );
 }
 
-export default MyApp
+export default App;

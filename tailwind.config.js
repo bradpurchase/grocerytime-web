@@ -6,7 +6,9 @@ module.exports = {
   purge: [],
   theme: {
     extend: {
-      screens: {},
+      screens: {
+        dark: { raw: "(prefers-color-scheme: dark)" },
+      },
     },
   },
   variants: {},

@@ -15,10 +15,10 @@ const Footer = React.memo(() => {
           <Link href="/about">About</Link>
         </li>
         <li className="mr-8">
-          <Link href="/">Privacy</Link>
+          <Link href="/privacy">Privacy</Link>
         </li>
         <li className="mr-8">
-          <Link href="mailto:feedback@grocerytime.app">Feedback</Link>
+          <Link href="/terms">Terms</Link>
         </li>
         <li className="">
           <Link href="mailto:support@grocerytime.app">Support</Link>
