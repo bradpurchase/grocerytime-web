@@ -116,14 +116,6 @@ const Terms = React.memo(() => (
         with the laws of Montreal, QC, Canada and you irrevocably submit to the
         exclusive jurisdiction of the courts in that State or location.
       </p>
-      <p className="leading-relaxed mt-6 text-sm text-gray-500 dark:text-gray-700">
-        <a
-          href="https://getterms.io"
-          title="Generate a free terms of use document"
-        >
-          Terms of Use created with GetTerms.
-        </a>
-      </p>
     </div>
   </>
 ));

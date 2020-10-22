@@ -55,11 +55,6 @@ const Privacy = React.memo(() => (
       <p className="leading-relaxed mt-6">
         This policy is effective as of 21 October 2020.
       </p>
-      <p className="leading-relaxed mt-6 text-sm text-gray-500 dark:text-gray-700">
-        <a href="https://getterms.io" title="Generate a free privacy policy">
-          Privacy Policy created with GetTerms.
-        </a>
-      </p>
     </div>
   </>
 ));
