@@ -6,8 +6,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>GroceryTime | About</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+        <title>GroceryTime: About</title>
       </Head>
 
       <div className="container p-10 flex flex-col item-center max-w-full">

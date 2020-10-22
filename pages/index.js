@@ -7,7 +7,6 @@ const Home = () => {
     <>
       <Head>
         <title>GroceryTime: Shared Grocery List App for iPhone and iPad</title>
-        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <Hero />
@@ -81,7 +80,7 @@ const Home = () => {
         }
         imageName="ShareStoreView"
         imagePos="left"
-        bgColor="bg-green-500"
+        bgColor="bg-white"
       />
     </>
   );

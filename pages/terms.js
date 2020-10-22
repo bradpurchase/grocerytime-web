@@ -5,8 +5,7 @@ import PageHeading from "../components/PageHeading";
 const Terms = React.memo(() => (
   <>
     <Head>
-      <title>GroceryTime | Terms of Service</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>GroceryTime: Terms of Service</title>
     </Head>
 
     <div className="container p-10 flex flex-col item-center max-w-full">

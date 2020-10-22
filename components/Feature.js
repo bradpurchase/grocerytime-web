@@ -15,7 +15,11 @@ const Feature = React.memo(
                   />
                   <img src={`/images/${imageName}.png`} />
                 </picture>
-                <div className={`text-white text-left w-full`}>
+                <div
+                  className={`${
+                    bgColor == "bg-white" ? "text-black" : "text-white"
+                  } text-left w-full`}
+                >
                   <h2 className="text-4xl font-bold mb-8 leading-tight">
                     {heading}
                   </h2>
@@ -24,7 +28,12 @@ const Feature = React.memo(
               </>
             ) : (
               <>
-                <div className="text-white text-left w-full">
+                <div
+                  className={`${
+                    bgColor == "bg-white" ? "text-black" : "text-white"
+                  }
+                   text-left w-full`}
+                >
                   <h2 className="text-4xl font-bold mb-8 leading-tight">
                     {heading}
                   </h2>

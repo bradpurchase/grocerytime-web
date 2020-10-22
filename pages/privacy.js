@@ -5,8 +5,7 @@ import PageHeading from "../components/PageHeading";
 const Privacy = React.memo(() => (
   <>
     <Head>
-      <title>GroceryTime | Privacy Policy</title>
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <title>GroceryTime: Privacy Policy</title>
     </Head>
 
     <div className="container p-10 flex flex-col item-center max-w-full">
