@@ -2,7 +2,7 @@ const Feature = React.memo(
   ({ heading, body, imageName, imagePos = "left", bgColor }) => {
     return (
       <div
-        className={`container ${bgColor} max-w-full px-8 py-20 flex flex-col item-center`}
+        className={`container ${bgColor} dark:bg-black max-w-full px-8 py-20 flex flex-col item-center`}
       >
         <div className="flex flex-col text-center items-center">
           <div className="max-w-4xl flex items-center flex-col-reverse lg:flex-row">
@@ -17,7 +17,9 @@ const Feature = React.memo(
                 </picture>
                 <div
                   className={`${
-                    bgColor == "bg-white" ? "text-black" : "text-white"
+                    bgColor == "bg-white"
+                      ? "text-black dark:text-white"
+                      : "text-white"
                   } text-left w-full`}
                 >
                   <h2 className="text-4xl font-bold mb-8 leading-tight">
@@ -30,7 +32,9 @@ const Feature = React.memo(
               <>
                 <div
                   className={`${
-                    bgColor == "bg-white" ? "text-black" : "text-white"
+                    bgColor == "bg-white dark:bg-black"
+                      ? "text-black"
+                      : "text-white"
                   }
                    text-left w-full`}
                 >
