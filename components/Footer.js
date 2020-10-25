@@ -5,12 +5,12 @@ const Footer = React.memo(() => {
   const year = date.getFullYear();
 
   return (
-    <div className="container flex items justify-between flex-wrap bg-black max-w-full mx-auto px-8 py-10">
-      <div className="flex text-white leading-loose">
+    <div className="container flex items justify-between flex-wrap bg-white dark:bg-black max-w-full mx-auto px-8 py-10">
+      <div className="flex text-black dark:text-white leading-loose">
         GroceryTime is designed and developed with care in Montreal. Copyright ©{" "}
         {year} Brad Purchase
       </div>
-      <ul className="flex mt-4 md:mt-0 text-white">
+      <ul className="flex mt-4 md:mt-0">
         <li className="mr-8">
           <Link href="/about">About</Link>
         </li>
