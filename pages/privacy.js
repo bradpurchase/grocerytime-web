@@ -8,7 +8,7 @@ const Privacy = React.memo(() => (
       <title>GroceryTime: Privacy Policy</title>
     </Head>
 
-    <div className="container p-10 flex flex-col item-center max-w-full">
+    <div className="container p-10 flex flex-col">
       <PageHeading title="Privacy Policy" />
 
       <p className="leading-relaxed">

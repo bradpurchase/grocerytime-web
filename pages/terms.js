@@ -8,7 +8,7 @@ const Terms = React.memo(() => (
       <title>GroceryTime: Terms of Service</title>
     </Head>
 
-    <div className="container p-10 flex flex-col item-center max-w-full">
+    <div className="container p-10 flex flex-col">
       <PageHeading title="Terms of Service" />
 
       <h3 className="text-2xl my-6">1. Terms</h3>

@@ -11,7 +11,7 @@ const Home = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className="container p-10 flex flex-col item-center max-w-full">
+      <div className="container p-10 flex flex-col">
         <PageHeading title="Roadmap" />
 
         <p className="leading-relaxed mb-6">
@@ -55,9 +55,7 @@ const Home = () => {
         <p className="leading-relaxed my-6 font-bold">
           Is there something you'd like to see in GroceryTime? I'm all ears!
           Email{" "}
-          <Link href="mailto:feedback@grocerytime.app">
-            feedback@grocerytime.app
-          </Link>
+          <Link href="mailto:feedback@groceryti.me">feedback@groceryti.me</Link>
         </p>
       </div>
     </>

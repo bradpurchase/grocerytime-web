@@ -18,7 +18,7 @@ const Footer = React.memo(() => {
           <Link href="/privacy">Privacy Policy</Link>
         </li>
         <li className="">
-          <Link href="mailto:support@grocerytime.app">Support</Link>
+          <Link href="mailto:support@groceryti.me">Support</Link>
         </li>
       </ul>
     </div>

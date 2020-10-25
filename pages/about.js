@@ -9,7 +9,7 @@ const Home = () => {
         <title>GroceryTime: About</title>
       </Head>
 
-      <div className="container p-10 flex flex-col item-center max-w-full">
+      <div className="container p-10 flex flex-col">
         <PageHeading title="About GroceryTime" />
 
         <p className="leading-relaxed mb-6">
