@@ -16,12 +16,15 @@ const Hero = React.memo(() => {
           Your new grocery store companion.
         </h2>
 
-        <button
-          disabled
-          className="rounded-full bg-red-600 hover:bg-red-700 text-white text-md lg:text-xl py-4 px-10 w-full md:w-1/3 lg:w-auto"
-        >
-          Coming soon 👀
-        </button>
+        <Link href="https://apps.apple.com/app/id1526291340">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-full bg-red-600 hover:bg-red-700 text-white text-md lg:text-xl py-4 px-10 w-full md:w-1/3 lg:w-auto"
+          >
+            Download
+          </a>
+        </Link>
         <small className="text-gray-500 text-sm mt-4">
           for iOS and iPadOS 14+
         </small>
