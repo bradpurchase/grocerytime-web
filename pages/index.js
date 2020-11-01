@@ -88,7 +88,7 @@ const Home = () => {
       >
         <div className="flex flex-col text-center items-center">
           <h2 className="text-white text-3xl font-bold mb-12">
-            Fits right in on your phone and iPad.
+            Fits right in on your iPhone and iPad.
           </h2>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-0 sm:mx-10">
