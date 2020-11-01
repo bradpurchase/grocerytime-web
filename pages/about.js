@@ -26,8 +26,9 @@ const Home = () => {
 
         <p className="leading-relaxed">
           I decided to build this during the COVID-19 lockdown of 2020. What
-          started as a quarantine project took a while new life and, after a ton
-          of work, I'm pretty proud of this app and I really hope you like it!
+          started as a quarantine project took a whole new life and, after lots
+          of hard work, I'm pretty proud of this app and I really hope you like
+          it!
         </p>
 
         <h3 className="text-2xl mt-10 mb-6">Credits</h3>

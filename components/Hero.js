@@ -25,7 +25,7 @@ const Hero = React.memo(() => {
             Download
           </a>
         </Link>
-        <small className="text-gray-500 text-sm mt-4">
+        <small className="text-gray-700 text-sm mt-4">
           <strong>Free</strong> on the App Store
           <br />
           for iOS and iPadOS 14+
