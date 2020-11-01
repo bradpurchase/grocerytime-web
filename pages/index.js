@@ -91,8 +91,8 @@ const Home = () => {
             Fits right in on your phone and iPad.
           </h2>
 
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-0 sm:mx-10">
-            <div className="text-white leading-loose text-left mb-4 sm:mb-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-0 sm:mx-10">
+            <div className="text-white leading-loose text-left mb-2 sm:mb-0">
               <h3 className="text-2xl font-bold">Siri Support</h3>
               <p className="text-lg">
                 Voice control is a "must-have" when planning groceries. As you
