@@ -82,6 +82,38 @@ const Home = () => {
         imagePos="left"
         bgColor="bg-white"
       />
+
+      <div
+        className={`container bg-red-600 dark:bg-black max-w-full px-8 py-20 flex flex-col item-center`}
+      >
+        <div className="flex flex-col text-center items-center">
+          <h2 className="text-white text-3xl font-bold mb-12">
+            Fits right in on your phone and iPad.
+          </h2>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-10 mx-0 sm:mx-10">
+            <div className="text-white leading-loose text-left mb-4 sm:mb-0">
+              <h3 className="text-2xl font-bold">Siri Support</h3>
+              <p className="text-lg">
+                Voice control is a "must-have" when planning groceries. As you
+                take inventory in your kitchen while grocery planning, use
+                GroceryTime's built-in Siri support to add items to store lists.
+                You can even use Siri to mark items as completed as you find
+                them at the store!
+              </p>
+            </div>
+            <div className="text-white leading-loose text-left">
+              <h3 className="text-2xl font-bold">Split Screen on iPad</h3>
+              <p className="text-lg">
+                GroceryTime supports the split-screen feature on iPadOS. Place
+                the app on one side of your iPad screen while you browse recipe
+                sites or discuss groceries with your partner in Messages on the
+                other. The app works and looks great at any screen size!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
