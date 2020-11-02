@@ -1,6 +1,6 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useLazyQuery, gql } from "@apollo/client";
+import { useLazyQuery, gql, useMutation } from "@apollo/client";
 
 import PageHeading from "../../components/PageHeading";
 
@@ -13,14 +13,39 @@ const PASSWORD_RESET_QUERY = gql`
   }
 `;
 
+const RESET_PASSWORD_MUTATION = gql`
+  mutation ResetPassword($token: String!, $password: String!) {
+    resetPassword(token: $token, password: $password) {
+      __typename
+      id
+    }
+  }
+`;
+
 const ResetPassword = () => {
   const router = useRouter();
   const { token } = router.query;
 
   const ref = React.useRef();
-  const [formData, setFormData] = React.useState({});
+  const [formData, setFormData] = React.useState({
+    password: "",
+    passwordConfirm: "",
+    submitting: false,
+    submitted: false,
+  });
 
   const [verifyToken, { loading, error }] = useLazyQuery(PASSWORD_RESET_QUERY);
+  const [resetPassword] = useMutation(RESET_PASSWORD_MUTATION, {
+    onCompleted: (data) => {
+      if (data.resetPassword) {
+        setFormData({
+          ...formData,
+          submitting: false,
+          submitted: true,
+        });
+      }
+    },
+  });
 
   React.useEffect(() => {
     if (token) verifyToken({ variables: { token } });
@@ -34,18 +59,27 @@ const ResetPassword = () => {
     } else {
       ref.current.setCustomValidity("");
     }
-  }, [formData.passwordConfirm]);
+  }, [formData]);
 
   const submitForm = (e) => {
     e.preventDefault();
+    setFormData({
+      ...formData,
+      submitting: true,
+    });
 
-    console.log("here");
+    resetPassword({
+      variables: {
+        token,
+        password: formData.password,
+      },
+    });
   };
 
   return (
     <>
       <Head>
-        <title>Reset Password</title>
+        <title>Reset Your Password</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
@@ -60,6 +94,10 @@ const ResetPassword = () => {
               <p className="text-red-500 text-lg font-bold my-6">
                 This password reset link has expired. Please use the Forgot
                 Password form again to retrieve a new link in your email!
+              </p>
+            ) : formData.submitted ? (
+              <p className="text-green-500 text-lg font-bold my-6">
+                Success! You can now log in to the app using your new password.
               </p>
             ) : (
               <>
@@ -80,7 +118,7 @@ const ResetPassword = () => {
                       type="password"
                       name="password"
                       id="password"
-                      className="appearance-none bg-gray-200 rounded-lg w-full py-4 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                      className="appearance-none bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg w-full py-4 px-3 leading-tight focus:outline-none focus:shadow-outline"
                       onChange={(e) =>
                         setFormData({
                           ...formData,
@@ -101,7 +139,7 @@ const ResetPassword = () => {
                       type="password"
                       name="passwordConfirm"
                       id="passwordConfirm"
-                      className="appearance-none bg-gray-200 rounded-lg w-full py-4 px-3 text-gray-700 text-lg leading-tight focus:outline-none focus:shadow-outline"
+                      className="appearance-none bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-200 rounded-lg w-full py-4 px-3 text-lg leading-tight focus:outline-none focus:shadow-outline"
                       onChange={(e) =>
                         setFormData({
                           ...formData,
@@ -113,8 +151,12 @@ const ResetPassword = () => {
                   <button
                     type="submit"
                     className="rounded-full bg-red-600 hover:bg-red-700 text-white text-md lg:text-xl py-4 px-10 w-full"
+                    disabled={
+                      formData.password?.length == 0 ||
+                      formData.passwordConfirm?.length == 0
+                    }
                   >
-                    Set New Password
+                    {formData.submitting ? "One sec..." : "Set New Password"}
                   </button>
                 </form>
               </>
