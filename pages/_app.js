@@ -19,12 +19,14 @@ function App({ Component, pageProps }) {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
-          <script
-            async
-            defer
-            data-website-id="fe82d042-84f4-44c3-8359-d809bd599144"
-            src="https://umami-8j4la46es.vercel.app/umami.js"
-          ></script>
+          {process.env.NODE_ENV === "production" && (
+            <script
+              async
+              defer
+              data-website-id="fe82d042-84f4-44c3-8359-d809bd599144"
+              src="https://umami-8j4la46es.vercel.app/umami.js"
+            />
+          )}
         </Head>
         <Component {...pageProps} />
         <Footer />
