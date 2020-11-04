@@ -1,6 +1,7 @@
 import Head from "next/head";
 
 import PageHeading from "../components/PageHeading";
+import PageContainer from "../components/PageContainer";
 
 const Home = () => {
   return (
@@ -9,7 +10,7 @@ const Home = () => {
         <title>GroceryTime: About</title>
       </Head>
 
-      <div className="container p-10 flex flex-col">
+      <PageContainer>
         <PageHeading title="About GroceryTime" />
 
         <p className="leading-relaxed mb-6">
@@ -69,7 +70,7 @@ const Home = () => {
             </a>
           </li>
         </ul>
-      </div>
+      </PageContainer>
     </>
   );
 };

@@ -1,6 +1,8 @@
+import * as React from "react";
 import Head from "next/head";
 
 import PageHeading from "../components/PageHeading";
+import PageContainer from "../components/PageContainer";
 
 const Privacy = React.memo(() => (
   <>
@@ -8,7 +10,7 @@ const Privacy = React.memo(() => (
       <title>GroceryTime: Privacy Policy</title>
     </Head>
 
-    <div className="container p-10 flex flex-col">
+    <PageContainer>
       <PageHeading title="Privacy Policy" />
 
       <p className="leading-relaxed">
@@ -54,7 +56,7 @@ const Privacy = React.memo(() => (
       <p className="leading-relaxed mt-6">
         This policy is effective as of 21 October 2020.
       </p>
-    </div>
+    </PageContainer>
   </>
 ));
 
