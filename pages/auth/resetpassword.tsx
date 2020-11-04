@@ -1,8 +1,10 @@
+import React, { useState, useEffect, useRef } from "react"
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useLazyQuery, gql, useMutation } from "@apollo/client";
 
 import PageHeading from "../../components/PageHeading";
+import PageContainer from "../../components/PageContainer";
 
 const PASSWORD_RESET_QUERY = gql`
   query PasswordReset($token: String!) {
@@ -26,8 +28,8 @@ const ResetPassword = () => {
   const router = useRouter();
   const { token } = router.query;
 
-  const ref = React.useRef();
-  const [formData, setFormData] = React.useState({
+  const ref = useRef<HTMLInputElement>();
+  const [formData, setFormData] = useState({
     password: "",
     passwordConfirm: "",
     submitting: false,
@@ -47,11 +49,11 @@ const ResetPassword = () => {
     },
   });
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (token) verifyToken({ variables: { token } });
   }, [token]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (!ref.current) return;
 
     if (formData.password != formData.passwordConfirm) {
@@ -83,7 +85,7 @@ const ResetPassword = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className="container p-10 flex flex-col">
+      <PageContainer>
         <PageHeading title="Reset Your Password" />
 
         {loading ? (
@@ -163,7 +165,7 @@ const ResetPassword = () => {
             )}
           </>
         )}
-      </div>
+      </PageContainer>
     </>
   );
 };

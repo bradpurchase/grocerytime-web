@@ -1,6 +1,9 @@
+import * as React from "react";
+
 import Head from "next/head";
 
 import PageHeading from "../components/PageHeading";
+import PageContainer from "../components/PageContainer";
 
 const Terms = React.memo(() => (
   <>
@@ -8,7 +11,7 @@ const Terms = React.memo(() => (
       <title>GroceryTime: Terms of Service</title>
     </Head>
 
-    <div className="container p-10 flex flex-col">
+    <PageContainer>
       <PageHeading title="Terms of Service" />
 
       <h3 className="text-2xl my-6">1. Terms</h3>
@@ -115,7 +118,7 @@ const Terms = React.memo(() => (
         with the laws of Montreal, QC, Canada and you irrevocably submit to the
         exclusive jurisdiction of the courts in that State or location.
       </p>
-    </div>
+    </PageContainer>
   </>
 ));
 

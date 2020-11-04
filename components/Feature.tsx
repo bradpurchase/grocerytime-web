@@ -1,4 +1,14 @@
-const Feature = React.memo(
+import * as React from "react";
+
+interface Props {
+  heading: String
+  body: React.ReactNode
+  imageName: String
+  imagePos?: String
+  bgColor: String
+}
+
+const Feature: React.FC<Props> = React.memo(
   ({ heading, body, imageName, imagePos = "left", bgColor }) => {
     return (
       <div

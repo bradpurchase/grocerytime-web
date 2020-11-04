@@ -1,6 +1,11 @@
+import * as React from 'react'
 import Link from "next/link";
 
-const PageHeading = React.memo(({ title }) => (
+interface Props {
+  title: String
+}
+
+const PageHeading: React.FC<Props> = React.memo(({ title }: Props) => (
   <>
     <div className="mb-8 flex w-full">
       <Link href="/">

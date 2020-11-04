@@ -1,9 +1,11 @@
+import * as React from "react";
 import Head from "next/head";
 import Link from "next/link";
 
 import PageHeading from "../components/PageHeading";
+import PageContainer from "../components/PageContainer";
 
-const Home = () => {
+const Home = React.memo(() => {
   return (
     <>
       <Head>
@@ -11,7 +13,7 @@ const Home = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <div className="container p-10 flex flex-col">
+      <PageContainer>
         <PageHeading title="Roadmap" />
 
         <p className="leading-relaxed mb-6">
@@ -57,9 +59,9 @@ const Home = () => {
           Email{" "}
           <Link href="mailto:feedback@groceryti.me">feedback@groceryti.me</Link>
         </p>
-      </div>
+      </PageContainer>
     </>
   );
-};
+});
 
 export default Home;
