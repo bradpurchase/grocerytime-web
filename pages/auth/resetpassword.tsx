@@ -28,7 +28,7 @@ const ResetPassword = () => {
   const router = useRouter();
   const { token } = router.query;
 
-  const ref = useRef();
+  const ref = useRef<HTMLInputElement>();
   const [formData, setFormData] = useState({
     password: "",
     passwordConfirm: "",
