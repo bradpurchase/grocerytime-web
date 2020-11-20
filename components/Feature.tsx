@@ -16,8 +16,8 @@ const Feature: React.FC<Props> = React.memo(
       >
         <div className="flex flex-col text-center items-center">
           <div
-            className={`max-w-4xl flex items-center flex-col-reverse lg:${
-              imagePos == "left" ? "flex-row" : "flex-row-reverse"
+            className={`max-w-4xl flex items-center flex-col-reverse ${
+              imagePos == "left" ? "lg:flex-row" : "lg:flex-row-reverse"
             }`}
           >
             <picture className="object-fit mt-10 lg:mt-0 lg:mr-16 w-full">
@@ -32,7 +32,7 @@ const Feature: React.FC<Props> = React.memo(
                 bgColor == "bg-white"
                   ? "text-black dark:text-white"
                   : "text-white"
-              } text-left w-full lg:${imagePos == "left" ? "ml-16" : "mr-16"}`}
+              } text-left w-full ${imagePos == "left" ? "lg:ml-16" : "lg:mr-16"}`}
             >
               <h2 className="text-4xl font-bold mb-8 leading-tight">
                 {heading}
