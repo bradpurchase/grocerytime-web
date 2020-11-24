@@ -8,6 +8,19 @@ module.exports = {
       },
     ];
   },
+  async headers() {
+    return [
+      {
+        source: "/.well-known/apple-app-site-association",
+        headers: [
+          {
+            key: "Content-Type",
+            value: "application/json",
+          },
+        ],
+      },
+    ];
+  },
   env: {
     API_BASE_URL: process.env.API_BASE_URL,
     API_KEY: process.env.API_KEY,

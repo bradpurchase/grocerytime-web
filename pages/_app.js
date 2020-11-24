@@ -19,6 +19,7 @@ function App({ Component, pageProps }) {
             name="viewport"
             content="initial-scale=1.0, width=device-width"
           />
+          <meta name="apple-itunes-app" content="app-id=1526291340" />
           {typeof window !== "undefined" &&
             process.env.NODE_ENV === "production" && (
               <script
