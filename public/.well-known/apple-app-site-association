@@ -1,4 +1,21 @@
 {
+  "applinks": {
+      "apps": [],
+      "details": [
+          {
+              "appID": "A4CR4P99S9.bradpurchase.GroceryTime",
+              "paths": ["*"]
+          },
+          {
+              "appID": "A4CR4P99S9.bradpurchase.GroceryTime.beta",
+              "paths": ["*"]
+          },
+          {
+              "appID": "A4CR4P99S9.bradpurchase.GroceryTime.debug",
+              "paths": ["*"]
+          }
+      ]
+  },
   "webcredentials": {
     "apps": [
       "A4CR4P99S9.bradpurchase.GroceryTime",
