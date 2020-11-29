@@ -40,16 +40,6 @@ const Home = React.memo(() => {
           more.
         </p>
 
-        <h3 className="text-2xl my-6">#3. Default Store Setting</h3>
-
-        <p className="leading-relaxed mb-6">
-          A setting will be added to allow you to set one of your stores the
-          default, so that it will always be displayed when you open
-          GroceryTime. This will also allow you to leave off the store name when
-          using Siri to add items, e.g. "Add Apples to my list in GroceryTime"
-          instead of "Add Apples to my Quick-E-Mart list in GroceryTime".
-        </p>
-
         <p className="leading-relaxed my-6 text-gray-800 dark:text-gray-600">
           ...and more!
         </p>
