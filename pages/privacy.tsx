@@ -16,9 +16,7 @@ const Privacy = React.memo(() => (
       <p className="leading-relaxed">
         Your privacy is important to us. It is GroceryTime's policy to respect
         your privacy regarding any information we may collect from you across
-        our website,{" "}
-        <a href="https://grocerytime.app">https://grocerytime.app</a>, and other
-        sites we own and operate.
+        our website, grocerytime.app, and other sites we own and operate.
       </p>
       <p className="leading-relaxed mt-6">
         We only ask for personal information when we truly need it to provide a
