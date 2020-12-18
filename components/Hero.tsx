@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Hero = React.memo(() => {
   return (
-    <div className="px-20 py-12">
+    <div className="px-20 pt-12 pb-2">
       <div className="mb-8 flex w-full justify-center">
         <Link href="/">
           <img src="/images/Icon.svg" className="h-20" />
