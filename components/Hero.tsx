@@ -31,6 +31,29 @@ const Hero = React.memo(() => {
           <br />
           for iOS and iPadOS 14+
         </small>
+
+        <div className="mt-8">
+          <Link href="https://www.producthunt.com/posts/grocerytime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-grocerytime">
+            <a target="_blank">
+              <img
+                className="dark:hidden"
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=278188&theme=light"
+                alt="GroceryTime - Share grocery lists. Your new grocery store companion. | Product Hunt"
+                style={{ width: "250px", height: "54px" }}
+                width="250"
+                height="54"
+              />
+              <img
+                className="hidden dark:block"
+                src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=278188&theme=dark"
+                alt="GroceryTime - Share grocery lists. Your new grocery store companion. | Product Hunt"
+                style={{ width: "250px", height: "54px" }}
+                width="250"
+                height="54"
+              />
+            </a>
+          </Link>
+        </div>
       </div>
     </div>
   );
