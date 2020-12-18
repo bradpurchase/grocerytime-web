@@ -32,12 +32,21 @@ const Home = React.memo(() => {
           lists with meals, and see an overview of all the meals you've added.
         </p>
 
-        <h3 className="text-2xl my-6">#2. Push Notifications</h3>
+        <h3 className="text-2xl my-6">#2. Widgets</h3>
 
         <p className="leading-relaxed mb-6">
-          GroceryTime will support push notifications. You'll be able to get
-          notified when someone adds or updates items in your grocery lists, and
-          more.
+          Several users have expressed interest in home screen widgets for
+          GroceryTime on iOS 14. I think this would be great, too! I've started
+          working on a widget to view your current trip in a store, and another
+          to provide quick links to your stores.
+        </p>
+
+        <h3 className="text-2xl my-6">#3. Item Categorization Improvements</h3>
+
+        <p className="leading-relaxed mb-6">
+          I'd like to make the item categorization a lot better. Still far too
+          many items are getting categorized as "Misc.", so I'm going to be
+          overhauling how this works to make it a lot smarter.
         </p>
 
         <p className="leading-relaxed my-6 text-gray-800 dark:text-gray-600">
