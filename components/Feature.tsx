@@ -1,18 +1,17 @@
 import * as React from "react";
 
 interface Props {
-  heading: String
-  body: React.ReactNode
-  imageName: String
-  imagePos?: String
-  bgColor: String
+  heading: String;
+  body: React.ReactNode;
+  imageName: String;
+  imagePos?: String;
 }
 
 const Feature: React.FC<Props> = React.memo(
-  ({ heading, body, imageName, imagePos = "left", bgColor }) => {
+  ({ heading, body, imageName, imagePos = "left" }) => {
     return (
       <div
-        className={`container ${bgColor} dark:bg-black max-w-full px-8 py-20 flex flex-col item-center`}
+        className={`container bg-white dark:bg-black max-w-full px-8 py-20 flex flex-col item-center`}
       >
         <div className="flex flex-col text-center items-center">
           <div
@@ -28,11 +27,9 @@ const Feature: React.FC<Props> = React.memo(
               <img src={`/images/${imageName}.png`} />
             </picture>
             <div
-              className={`${
-                bgColor == "bg-white"
-                  ? "text-black dark:text-white"
-                  : "text-white"
-              } text-left w-full ${imagePos == "left" ? "lg:ml-16" : "lg:mr-16"}`}
+              className={`"text-black dark:text-white" text-left w-full ${
+                imagePos == "left" ? "lg:ml-16" : "lg:mr-16"
+              }`}
             >
               <h2 className="text-4xl font-bold mb-8 leading-tight">
                 {heading}

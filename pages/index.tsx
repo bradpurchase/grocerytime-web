@@ -32,7 +32,6 @@ const Home = () => {
         }
         imageName="StoreView"
         imagePos="left"
-        bgColor="bg-red-600"
       />
 
       <Feature
@@ -57,7 +56,6 @@ const Home = () => {
         }
         imageName="ViewTripHistory"
         imagePos="right"
-        bgColor="bg-black"
       />
 
       <Feature
@@ -80,7 +78,6 @@ const Home = () => {
         }
         imageName="ShareStoreView"
         imagePos="left"
-        bgColor="bg-white"
       />
 
       <div
