@@ -22,14 +22,14 @@ const Home = React.memo(() => {
           I'm working on currently:
         </p>
 
-        <h3 className="text-2xl my-6">#1. Meal Planning</h3>
+        <h3 className="text-2xl my-6">#1. Meal Planning Improvements</h3>
 
         <p className="leading-relaxed mb-6">
-          A big part of grocery shopping is planning out meals for the week. I'm
-          working on a feature which will allow you to do just that within the
-          app. You'll be able to add meals that coordinate with a given grocery
-          trip (i.e. your meals for the week), associate items in your grocery
-          lists with meals, and see an overview of all the meals you've added.
+          It would be nice if you could create recipes in GroceryTime straight from
+          a recipe website in the share sheet. You should also be able to quickly re-plan
+          a meal straight from the meals calendar. And in your grocery list you should be able
+          to see which items are associated with meals. I'll be working on these things
+          (and more) to improve the brand new Meals feature.
         </p>
 
         <h3 className="text-2xl my-6">#2. Widgets</h3>
