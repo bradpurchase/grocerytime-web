@@ -1,5 +1,6 @@
 import * as React from "react";
 import Link from "next/link";
+import DownloadButton from "./DownloadButton";
 
 const Hero = React.memo(() => {
   return (
@@ -20,22 +21,13 @@ const Hero = React.memo(() => {
         </div>
       </div>
       <div className="flex flex-col text-center items-center">
-        <Link href="https://apps.apple.com/app/id1526291340">
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full bg-red-600 hover:bg-red-700 text-white text-md lg:text-xl py-4 px-10 w-full md:w-1/3 lg:w-auto"
-          >
-            Download
-          </a>
-        </Link>
-        <small className="text-gray-700 dark:text-gray-200 text-sm mt-4">
-          <strong>Free</strong> on the App Store
-          <br />
-          for iOS and iPadOS 14+
+        <DownloadButton />
+
+        <small className="text-gray-700 dark:text-gray-400 text-sm mt-4">
+          <strong>Free</strong> on the App Store for iOS and iPadOS
         </small>
 
-        <div className="mt-8">
+        <div className="mt-8 md:mt-12">
           <Link href="https://www.producthunt.com/posts/grocerytime?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-grocerytime">
             <a target="_blank">
               <img

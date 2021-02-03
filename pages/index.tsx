@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Feature from "../components/Feature";
+import DownloadButton from "../components/DownloadButton";
 
 const Home = () => {
   return (
@@ -110,6 +111,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col items-center text-center my-10 px-10">
+        <DownloadButton />
       </div>
     </>
   );
