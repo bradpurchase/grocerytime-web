@@ -3,20 +3,23 @@ import Link from "next/link";
 
 const Hero = React.memo(() => {
   return (
-    <div className="px-20 pt-12">
-      <div className="mb-8 flex w-full justify-center">
-        <Link href="/">
-          <img src="/images/Icon.svg" className="h-20" />
-        </Link>
+    <div className="px-10 pt-12">
+      <div className="flex flex-col md:flex-row w-full justify-center text-center md:text-left mb-8 md:mb-12">
+        <div className="flex flex-col justify-center mx-auto md:mx-0">
+          <Link href="/">
+            <img src="/images/icon.png" className="h-20 rounded-xl" />
+          </Link>
+        </div>
+        <div className="flex flex-col my-4 md:my-0 md:ml-6">
+          <h1 className="text-gray-900 dark:text-gray-200 text-3xl font-bold">
+            GroceryTime
+          </h1>
+          <h2 className="text-gray-800 dark:text-gray-100 text-2xl">
+            Your new grocery store companion.
+          </h2>
+        </div>
       </div>
       <div className="flex flex-col text-center items-center">
-        <h1 className="text-gray-900 dark:text-gray-200 text-4xl font-bold leading-tight mb-4">
-          GroceryTime
-        </h1>
-        <h2 className="text-gray-800 dark:text-gray-100 text-3xl leading-tight mb-8">
-          Your new grocery store companion.
-        </h2>
-
         <Link href="https://apps.apple.com/app/id1526291340">
           <a
             target="_blank"
@@ -26,7 +29,7 @@ const Hero = React.memo(() => {
             Download
           </a>
         </Link>
-        <small className="text-gray-700 text-sm mt-4">
+        <small className="text-gray-700 dark:text-gray-200 text-sm mt-4">
           <strong>Free</strong> on the App Store
           <br />
           for iOS and iPadOS 14+
