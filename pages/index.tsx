@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Hero from "../components/Hero";
 import Feature from "../components/Feature";
+import DownloadButton from "../components/DownloadButton";
 
 const Home = () => {
   return (
@@ -12,7 +13,7 @@ const Home = () => {
       <Hero />
 
       <Feature
-        heading="Organize your grocery shopping."
+        heading="Get organized with your grocery shopping. Together."
         body={
           <>
             <p>
@@ -23,10 +24,9 @@ const Home = () => {
             </p>
 
             <p className="mt-8">
-              After a shopping trip, you see a helpful summary of the items you
-              picked up and which ones you couldn't find. For those times when
-              you didn't find everything you needed, GroceryTime allows you to
-              move those items right over to your next trip.
+              GroceryTime was also built with sharing in mind. Share your
+              grocery lists with your spouse, roommates - heck, anyone - and
+              plan your groceries together.
             </p>
           </>
         }
@@ -40,17 +40,16 @@ const Home = () => {
           <>
             <p>
               Every grocery list app allows you to add items to a list and check
-              them off as you find them at the store. But grocery shopping is
-              different than a to-do list.
+              them off as you find them at the store. But your weekly grocery
+              shopping can be an unorganized, annoying mess if you're not
+              organized &mdash; that's where GroceryTime comes in.
             </p>
             <p className="mt-8">
               You most likely buy similar items each time you go to the store,
               so it should be easy to view your past trips and add items to your
-              current trip to make building your list easier.
-            </p>
-            <p className="mt-8">
-              Trip History is just one of the many features built into
-              GroceryTime that make planning your grocery trip so much easier.
+              current trip to make building your list easier. Trip History is
+              just one of the many features built into GroceryTime that make
+              planning your grocery trip so much easier.
             </p>
           </>
         }
@@ -59,24 +58,24 @@ const Home = () => {
       />
 
       <Feature
-        heading="Shop smarter. Together."
+        heading="Meal planning made easy."
         body={
           <>
             <p>
-              GroceryTime was built to make sharing simple. Share your grocery
-              lists with your spouse, roommates - heck, anyone - and plan your
-              groceries together.
+              Buying food at the supermarket is only one part of the equation
+              when it comes to grocery shopping. The other very important part
+              of it is meal planning, which you'll be happy to learn GroceryTime
+              has built right in!
             </p>
             <p className="mt-8">
-              Simply enter the email address of the person you'd like to add,
-              and that's it. The person will receive an email with a link
-              allowing them to join you, and once they do, you can both see the
-              list, add items and check things off as you find them at the
-              store!
+              Plan meals for each week in your Meals tab and share them with
+              anyone you've shared your grocery lists with. Your Meals tab
+              contains a beautiful calendar which allows you to jump between
+              weeks and view your entire history of meals planned.
             </p>
           </>
         }
-        imageName="ShareStoreView"
+        imageName="Meals"
         imagePos="left"
       />
 
@@ -110,6 +109,10 @@ const Home = () => {
             </div>
           </div>
         </div>
+      </div>
+
+      <div className="flex flex-col items-center text-center my-10 px-10">
+        <DownloadButton />
       </div>
     </>
   );
