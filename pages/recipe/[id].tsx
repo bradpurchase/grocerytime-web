@@ -1,10 +1,9 @@
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useLazyQuery, gql, useMutation } from "@apollo/client";
+import { useQuery, gql } from "@apollo/client";
 
 import PageHeading from "../../components/PageHeading";
 import PageContainer from "../../components/PageContainer";
-import { useEffect } from "react";
 
 const RECIPE_QUERY = gql`
   query Recipe($id: ID!) {
@@ -33,21 +32,24 @@ const ShareRecipe = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const [recipeQuery, { loading, error }] = useLazyQuery(RECIPE_QUERY);
+  const { loading, error, data } = useQuery(RECIPE_QUERY, {
+    variables: { id },
+  });
 
-  useEffect(() => {
-    if (id) recipeQuery({ variables: { id: id } });
-  }, [id]);
+  if (loading) return "Loading...";
+  if (error) return `Error! ${error}`;
+
+  const { recipe } = data;
 
   return (
     <>
       <Head>
-        <title>Recipe {id}</title>
+        <title>{recipe.name} on GroceryTime</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
       <PageContainer pageStyle="mini">
-        <PageHeading title={`Recipe ${id}`} />
+        <PageHeading title={recipe.name} />
       </PageContainer>
 
       {loading ? (
@@ -56,8 +58,7 @@ const ShareRecipe = () => {
         <>
           {error ? (
             <p className="text-red-500 text-lg font-bold my-6">
-              This password reset link has expired. Please use the Forgot
-              Password form again to retrieve a new link in your email!
+              This recipe was not found.
             </p>
           ) : (
             <>
