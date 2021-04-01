@@ -1,13 +1,16 @@
 import * as React from "react";
 
 interface Props {
-  children?: React.ReactNode
+  children?: React.ReactNode;
+  pageStyle?: String;
 }
 
 const PageContainer: React.FC<Props> = React.memo((props) => (
-  <div className="container p-10 flex flex-col">
-    {props.children}
+  <div className="p-10 flex flex-col items-center justify-center">
+    <div className={props.pageStyle == "mini" ? "w-1/2" : "w-full"}>
+      {props.children}
+    </div>
   </div>
-))
+));
 
-export default PageContainer
+export default PageContainer;

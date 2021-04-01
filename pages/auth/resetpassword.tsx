@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react"
+import React, { useState, useEffect, useRef } from "react";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { useLazyQuery, gql, useMutation } from "@apollo/client";
@@ -85,7 +85,7 @@ const ResetPassword = () => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <PageContainer>
+      <PageContainer pageStyle="mini">
         <PageHeading title="Reset Your Password" />
 
         {loading ? (
