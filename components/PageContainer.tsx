@@ -7,7 +7,7 @@ interface Props {
 
 const PageContainer: React.FC<Props> = React.memo((props) => (
   <div className="p-10 flex flex-col items-center justify-center">
-    <div className={props.pageStyle == "mini" ? "w-1/2" : "w-full"}>
+    <div className={props.pageStyle == "mini" ? "lg:w-1/2" : "w-full"}>
       {props.children}
     </div>
   </div>
