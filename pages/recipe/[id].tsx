@@ -5,6 +5,21 @@ import { useQuery, gql } from "@apollo/client";
 import PageHeading from "../../components/PageHeading";
 import PageContainer from "../../components/PageContainer";
 
+interface Recipe {
+  name: string
+  description: string
+  mealType: string
+  imageUrl: string
+}
+
+interface RecipeData {
+  recipe: Recipe
+}
+
+interface RecipeVars {
+  id: string
+}
+
 const RECIPE_QUERY = gql`
   query Recipe($id: ID!) {
     recipe(id: $id) {
@@ -32,8 +47,8 @@ const ShareRecipe = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const { loading, error, data } = useQuery(RECIPE_QUERY, {
-    variables: { id },
+  const { loading, error, data } = useQuery<RecipeData, RecipeVars>(RECIPE_QUERY, {
+    variables: { id: id },
   });
 
   if (loading) return "Loading...";
