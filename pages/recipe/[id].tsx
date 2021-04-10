@@ -17,7 +17,7 @@ interface RecipeData {
 }
 
 interface RecipeVars {
-  id: string
+  id: string | string[]
 }
 
 const RECIPE_QUERY = gql`
@@ -48,7 +48,7 @@ const ShareRecipe = () => {
   const { id } = router.query;
 
   const { loading, error, data } = useQuery<RecipeData, RecipeVars>(RECIPE_QUERY, {
-    variables: { id: id },
+    variables: { id },
   });
 
   if (loading) return "Loading...";
@@ -65,26 +65,11 @@ const ShareRecipe = () => {
 
       <PageContainer pageStyle="mini">
         <PageHeading title={recipe.name} />
-      </PageContainer>
 
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        <>
-          {error ? (
-            <p className="text-red-500 text-lg font-bold my-6">
-              This recipe was not found.
-            </p>
-          ) : (
-            <>
-              <p className="leading-relaxed mb-6">
-                Forgot your password? No worries! Use the form below to set a
-                new one.
-              </p>
-            </>
-          )}
-        </>
-      )}
+
+        <img src={recipe.imageUrl} alt={recipe.name} className="rounded-lg" />
+        <h2>{recipe.description}</h2>
+      </PageContainer>
     </>
   );
 };
