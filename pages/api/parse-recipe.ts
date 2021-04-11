@@ -327,7 +327,7 @@ class RecipeParser {
 }
 
 export default async function (req, res) {
-  return new Promise((resolve) => {
+  return new Promise<void>((resolve) => {
     const recipeParser = new RecipeParser(req.query.url);
     recipeParser
       .parseWebpage()
