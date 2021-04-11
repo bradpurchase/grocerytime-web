@@ -16,6 +16,7 @@ type Recipe = {
   image: RecipeImage;
   recipeIngredient: [string];
 };
+
 class RecipeParser {
   url: string;
   dom: any;
