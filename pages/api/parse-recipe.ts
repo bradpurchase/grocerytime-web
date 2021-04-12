@@ -329,7 +329,14 @@ class RecipeParser {
 
 export default async function (req, res) {
   return new Promise<void>((resolve) => {
-    const recipeParser = new RecipeParser(req.query.url);
+    const authHeader = req.headers["authorization"];
+    if (authHeader != process.env.WEB_API_KEY) {
+      res.status(500).json({});
+      return resolve();
+    }
+
+    const url = req.query.url;
+    const recipeParser = new RecipeParser(url);
     recipeParser
       .parseWebpage()
       .then((data) => recipeParser.parse(data))
