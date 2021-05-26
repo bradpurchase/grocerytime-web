@@ -1,16 +1,12 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import { useQuery, gql } from "@apollo/client";
+import Head from "next/head"
+import { useRouter } from "next/router"
+import { useQuery, gql } from "@apollo/client"
+import { Recipe } from "./types"
 
-import PageHeading from "../../components/PageHeading";
-import PageContainer from "../../components/PageContainer";
+import PageHeading from "../../components/PageHeading"
+import PageContainer from "../../components/PageContainer"
 
-interface Recipe {
-  name: string
-  description: string
-  mealType: string
-  imageUrl: string
-}
+import RecipeHeader from "./RecipeHeader"
 
 interface RecipeData {
   recipe: Recipe
@@ -64,11 +60,9 @@ const ShareRecipe = () => {
       </Head>
 
       <PageContainer pageStyle="mini">
-        <PageHeading title={recipe.name} />
+        <PageHeading />
 
-
-        <img src={recipe.imageUrl} alt={recipe.name} className="rounded-lg" />
-        <h2>{recipe.description}</h2>
+        <RecipeHeader recipe={recipe} />
       </PageContainer>
     </>
   );

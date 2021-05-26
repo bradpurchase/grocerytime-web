@@ -2,7 +2,7 @@ import * as React from "react";
 import Link from "next/link";
 
 interface Props {
-  title: String;
+  title?: String;
 }
 
 const PageHeading: React.FC<Props> = React.memo(({ title }: Props) => (
