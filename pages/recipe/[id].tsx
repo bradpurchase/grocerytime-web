@@ -7,7 +7,7 @@ import PageHeading from "../../components/PageHeading"
 import PageContainer from "../../components/PageContainer"
 import Button from "../../components/Button"
 
-import RecipeHeader from "./RecipeHeader"
+import RecipeHeader from "../../components/Recipes/RecipeHeader"
 
 interface RecipeData {
   recipe: Recipe
