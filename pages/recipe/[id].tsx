@@ -5,6 +5,7 @@ import { Recipe } from "./types"
 
 import PageHeading from "../../components/PageHeading"
 import PageContainer from "../../components/PageContainer"
+import Button from "../../components/Button"
 
 import RecipeHeader from "./RecipeHeader"
 
@@ -63,6 +64,8 @@ const ShareRecipe = () => {
         <PageHeading />
 
         <RecipeHeader recipe={recipe} />
+
+        <Button label="Add to Meal Plan" />
       </PageContainer>
     </>
   );
