@@ -1,7 +1,7 @@
 import Head from "next/head"
 import { useRouter } from "next/router"
 import { useQuery, gql } from "@apollo/client"
-import { Recipe } from "./types"
+import { Recipe } from "../../types/Recipe"
 
 import PageHeading from "../../components/PageHeading"
 import PageContainer from "../../components/PageContainer"
