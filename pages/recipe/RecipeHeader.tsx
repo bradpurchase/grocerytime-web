@@ -1,4 +1,4 @@
-import { Recipe } from "./types";
+import { Recipe } from "../../types/Recipe";
 
 interface Props {
   recipe: Recipe;
