@@ -30,17 +30,17 @@ const RecipeHeader: React.FC<Props> = ({ recipe }: Props) => {
     console.log(mealType);
     switch (mealType) {
       case "breakfast":
-        return "orange";
+        return "text-orange";
       case "lunch":
-        return "green";
+        return "text-green-500";
       case "dinner":
-        return "red";
+        return "text-red-500";
       case "snack":
-        return "blue";
+        return "text-blue-500";
       case "dessert":
-        return "pink";
+        return "text-pink-500";
       default:
-        return "gray";
+        return "text-gray-500";
     }
   };
 
@@ -54,7 +54,7 @@ const RecipeHeader: React.FC<Props> = ({ recipe }: Props) => {
 
       <div className="py-4">
         <small
-          className={`text-${mealTypeLabelColor()}-500 text-sm uppercase font-semibold`}
+          className={`${mealTypeLabelColor()} text-sm uppercase font-semibold`}
         >
           {recipe.mealType}
         </small>
