@@ -1,20 +1,20 @@
-import Head from "next/head"
-import { useRouter } from "next/router"
-import { useQuery, gql } from "@apollo/client"
-import { Recipe } from "../../types/Recipe"
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { useQuery, gql } from "@apollo/client";
+import { Recipe } from "../../types/Recipe";
 
-import PageHeading from "../../components/PageHeading"
-import PageContainer from "../../components/PageContainer"
-import Button from "../../components/Button"
+import PageHeading from "../../components/PageHeading";
+import PageContainer from "../../components/PageContainer";
+import Button from "../../components/Button";
 
-import RecipeHeader from "../../components/Recipes/RecipeHeader"
+import RecipeHeader from "../../components/Recipes/RecipeHeader";
 
 interface RecipeData {
-  recipe: Recipe
+  recipe: Recipe;
 }
 
 interface RecipeVars {
-  id: string | string[]
+  id: string | string[];
 }
 
 const RECIPE_QUERY = gql`
@@ -44,9 +44,12 @@ const ShareRecipe = () => {
   const router = useRouter();
   const { id } = router.query;
 
-  const { loading, error, data } = useQuery<RecipeData, RecipeVars>(RECIPE_QUERY, {
-    variables: { id },
-  });
+  const { loading, error, data } = useQuery<RecipeData, RecipeVars>(
+    RECIPE_QUERY,
+    {
+      variables: { id },
+    }
+  );
 
   if (loading) return "Loading...";
   if (error) return `Error! ${error}`;
@@ -65,7 +68,24 @@ const ShareRecipe = () => {
 
         <RecipeHeader recipe={recipe} />
 
-        <Button label="Add to Meal Plan" />
+        <div className="space-y-2">
+          <a
+            href={recipe.url}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex"
+          >
+            <Button label="Visit Recipe Page" backgroundColor="secondary" />
+          </a>
+          <a
+            href={`grocerytime://recipe/${recipe.id}`}
+            target="_blank"
+            rel="noreferrer noopener"
+            className="flex"
+          >
+            <Button label="Open in GroceryTime" />
+          </a>
+        </div>
       </PageContainer>
     </>
   );
