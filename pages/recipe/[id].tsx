@@ -5,9 +5,10 @@ import { Recipe } from "../../types/Recipe";
 
 import PageHeading from "../../components/PageHeading";
 import PageContainer from "../../components/PageContainer";
-import Button from "../../components/Button";
 
 import RecipeHeader from "../../components/Recipes/RecipeHeader";
+import RecipeDescription from "../../components/Recipes/RecipeDescription";
+import RecipeIngredients from "../../components/Recipes/RecipeIngredients";
 
 interface RecipeData {
   recipe: Recipe;
@@ -68,24 +69,19 @@ const ShareRecipe = () => {
 
         <RecipeHeader recipe={recipe} />
 
-        <div className="space-y-2">
-          <a
-            href={recipe.url}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex"
-          >
-            <Button label="Visit Recipe Page" backgroundColor="secondary" />
-          </a>
-          <a
-            href={`grocerytime://recipe/${recipe.id}`}
-            target="_blank"
-            rel="noreferrer noopener"
-            className="flex"
-          >
-            <Button label="Open in GroceryTime" />
-          </a>
-        </div>
+        <hr className="border-gray-200 dark:border-gray-500 flex my-10" />
+
+        <RecipeDescription recipe={recipe} />
+
+        {recipe.ingredients.length > 0 ? (
+          <>
+            <hr className="border-gray-200 dark:border-gray-500 flex my-10" />
+
+            <RecipeIngredients recipe={recipe} />
+          </>
+        ) : (
+          ""
+        )}
       </PageContainer>
     </>
   );

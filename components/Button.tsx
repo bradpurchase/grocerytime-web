@@ -10,7 +10,7 @@ const Button: React.FC<Props> = React.memo(
     const buttonColors = () => {
       switch (backgroundColor) {
         case "secondary":
-          return "bg-gray-300 hover:bg-gray-400 text-gray-800";
+          return "bg-gray-300 dark:bg-gray-800 hover:bg-gray-400 text-gray-800 dark:text-white";
         default:
           return "bg-red-600 hover:bg-red-700 text-white";
       }
