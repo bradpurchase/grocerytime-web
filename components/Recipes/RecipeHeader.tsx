@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 import { Recipe } from "../../types/Recipe";
 import Button from "../../components/Button";
 
@@ -31,11 +33,22 @@ const RecipeHeader: React.FC<Props> = ({ recipe }: Props) => {
 
   return (
     <>
-      <img
-        src={recipe.imageUrl}
-        alt={recipe.name}
-        className="object-cover w-full max-h-60 lg:max-h-72 rounded-lg"
-      />
+      {recipe.imageUrl ? (
+        <img
+          src={recipe.imageUrl}
+          alt={recipe.name}
+          className="object-cover w-full max-h-60 lg:max-h-72 rounded-lg"
+        />
+      ) : (
+        <Image
+          src="/images/RecipeImagePlaceholder.jpg"
+          className="rounded-lg"
+          layout="responsive"
+          objectFit="cover"
+          width={750}
+          height={300}
+        />
+      )}
 
       <div className="py-4">
         <small

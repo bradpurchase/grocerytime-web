@@ -69,13 +69,18 @@ const ShareRecipe = () => {
 
         <RecipeHeader recipe={recipe} />
 
-        <hr className="border-gray-200 dark:border-gray-500 flex my-10" />
-
-        <RecipeDescription recipe={recipe} />
+        {recipe.description ? (
+          <>
+            <hr className="border-gray-300 dark:border-gray-500 flex my-10" />
+            <RecipeDescription recipe={recipe} />
+          </>
+        ) : (
+          ""
+        )}
 
         {recipe.ingredients.length > 0 ? (
           <>
-            <hr className="border-gray-200 dark:border-gray-500 flex my-10" />
+            <hr className="border-gray-300 dark:border-gray-500 flex my-10" />
 
             <RecipeIngredients recipe={recipe} />
           </>
