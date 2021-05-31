@@ -71,7 +71,7 @@ const ShareRecipe = () => {
 
         {recipe.description ? (
           <>
-            <hr className="border-gray-300 dark:border-gray-500 flex my-10" />
+            <hr className="border-gray-300 dark:border-gray-500 flex my-6" />
             <RecipeDescription recipe={recipe} />
           </>
         ) : (
@@ -80,7 +80,7 @@ const ShareRecipe = () => {
 
         {recipe.ingredients.length > 0 ? (
           <>
-            <hr className="border-gray-300 dark:border-gray-500 flex my-10" />
+            <hr className="border-gray-300 dark:border-gray-500 flex my-6" />
 
             <RecipeIngredients recipe={recipe} />
           </>
