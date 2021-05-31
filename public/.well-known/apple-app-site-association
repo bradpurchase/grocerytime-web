@@ -2,17 +2,20 @@
   "applinks": {
       "details": [
           {
-              "appID": "A4CR4P99S9.bradpurchase.GroceryTime",
-              "paths": ["*"]
+              "appIDs": ["A4CR4P99S9.bradpurchase.GroceryTime", "A4CR4P99S9.bradpurchase.GroceryTime.beta", "A4CR4P99S9.bradpurchase.GroceryTime.debug"],
+              "components": [
+                {
+                  "/": "/auth/resetpassword",
+                  "exclude": true,
+                  "comment": "Matches the reset password URL"
+                },
+                {
+                  "/": "/recipe/*",
+                  "exclude": true,
+                  "comment": "Matches any URL whose path starts with /recipe/"
+                }
+              ]
           },
-          {
-              "appID": "A4CR4P99S9.bradpurchase.GroceryTime.beta",
-              "paths": ["*"]
-          },
-          {
-              "appID": "A4CR4P99S9.bradpurchase.GroceryTime.debug",
-              "paths": ["*"]
-          }
       ]
   },
   "webcredentials": {
