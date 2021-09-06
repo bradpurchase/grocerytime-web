@@ -9,12 +9,19 @@ type RecipeImage = {
   url: string;
 };
 
+type Instruction = {
+  text: string;
+  name?: string;
+  url?: string;
+};
+
 type Recipe = {
   name?: string;
   description?: string;
   recipeCategory?: string | [string];
   image: RecipeImage;
   recipeIngredient: [string];
+  recipeInstructions?: Instruction[];
 };
 
 class RecipeParser {
@@ -147,8 +154,10 @@ class RecipeParser {
     // Handle fractions/unicode fractions
     // https://github.com/nsafai/recipe-parser/blob/master/src/convert.ts
     const fractions = this.fractions();
-    const numericAndFractionRegex = /^(\d+\/\d+)|(\d+\s\d+\/\d+)|(\d+.\d+)|\d+/g;
-    const numericRangeWithSpaceRegex = /^(\d+\-\d+)|^(\d+\s\-\s\d+)|^(\d+\sto\s\d+)/g; // for ex: "1 to 2" or "1 - 2"
+    const numericAndFractionRegex =
+      /^(\d+\/\d+)|(\d+\s\d+\/\d+)|(\d+.\d+)|\d+/g;
+    const numericRangeWithSpaceRegex =
+      /^(\d+\-\d+)|^(\d+\s\-\s\d+)|^(\d+\sto\s\d+)/g; // for ex: "1 to 2" or "1 - 2"
     const unicodeFractionRegex = /\d*[^\u0000-\u007F]+/g;
     const onlyUnicodeFraction = /[^\u0000-\u007F]+/g;
 
@@ -228,12 +237,32 @@ class RecipeParser {
     return match;
   }
 
-  getFirstMatch(line: string, regex: RegExp) {
+  // Instructions parsing
+
+  fetchInstructions() {
+    if (this.recipe.recipeInstructions != null) {
+      return this.recipe.recipeInstructions.map((instruction: Instruction) =>
+        this.parseInstruction(instruction)
+      );
+    }
+  }
+
+  parseInstruction(instruction: Instruction) {
+    return {
+      text: instruction.text,
+      name: instruction.name,
+      url: instruction.url,
+    };
+  }
+
+  // Private methods
+
+  private getFirstMatch(line: string, regex: RegExp) {
     const match = line.match(regex);
     return (match && match[0]) || "";
   }
 
-  fractions() {
+  private fractions() {
     return {
       "½": "1/2",
       "⅓": "1/3",
@@ -256,7 +285,7 @@ class RecipeParser {
     };
   }
 
-  units() {
+  private units() {
     return {
       cup: ["c", "c.", "C", "Cups"],
       gallon: ["gal"],
@@ -290,7 +319,7 @@ class RecipeParser {
     };
   }
 
-  pluralUnits() {
+  private pluralUnits() {
     return {
       cup: "cups",
       gallon: "gallons",
@@ -315,6 +344,8 @@ class RecipeParser {
     };
   }
 
+  // Serialization
+
   json() {
     return {
       url: this.url,
@@ -323,6 +354,7 @@ class RecipeParser {
       category: this.fetchCategory(),
       image: this.fetchImage(),
       ingredients: this.fetchIngredients(),
+      instructions: this.fetchInstructions(),
     };
   }
 }
