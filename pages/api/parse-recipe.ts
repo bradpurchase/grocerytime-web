@@ -242,15 +242,7 @@ class RecipeParser {
   fetchInstructions() {
     const recipeInstructions = this.recipe.recipeInstructions;
     if (recipeInstructions != null) {
-      const instructions = [];
-      for (const instruction of recipeInstructions) {
-        if (instruction["@type"] === "HowToStep") {
-          instructions.push(instruction);
-        } else if (instruction["@type"] === "HowToSection") {
-          instructions.push(instruction["itemListElement"]);
-        }
-      }
-      return instructions;
+      return this.recipe.recipeInstructions.map((ins) => ins);
     }
   }
 
