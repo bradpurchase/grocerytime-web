@@ -10,9 +10,11 @@ type RecipeImage = {
 };
 
 type Instruction = {
+  "@type": string;
   text: string;
   name?: string;
   url?: string;
+  itemListElement?: [Instruction];
 };
 
 type Recipe = {
