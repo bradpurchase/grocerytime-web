@@ -240,19 +240,18 @@ class RecipeParser {
   // Instructions parsing
 
   fetchInstructions() {
-    if (this.recipe.recipeInstructions != null) {
-      return this.recipe.recipeInstructions.map((instruction: Instruction) =>
-        this.parseInstruction(instruction)
-      );
+    const recipeInstructions = this.recipe.recipeInstructions;
+    if (recipeInstructions != null) {
+      const instructions = [];
+      for (const instruction of recipeInstructions) {
+        if (instruction["@type"] === "HowToStep") {
+          instructions.push(instruction);
+        } else if (instruction["@type"] === "HowToSection") {
+          instructions.push(instruction["itemListElement"]);
+        }
+      }
+      return instructions;
     }
-  }
-
-  parseInstruction(instruction: Instruction) {
-    return {
-      text: instruction.text,
-      name: instruction.name,
-      url: instruction.url,
-    };
   }
 
   // Private methods
