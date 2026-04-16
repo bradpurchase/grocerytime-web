@@ -13,23 +13,23 @@ const Sunset = React.memo(() => (
 			<PageHeading title="A note about GroceryTime" />
 
 			<p className="leading-relaxed mb-4">
-				GroceryTime will be discontinued on April 15, 2026.
+				GroceryTime was shut down on April 15, 2026.
 			</p>
 
 			<p className="leading-relaxed mb-4">
-				I&apos;ve chosen to shut down GroceryTime because I&apos;ve had to
-				rededicate my time to my full-time job, life commitments, and other
-				projects. Also, to be transparent, the server that powers the backend of
-				the app is a recurring cost that I can no longer justify given the low
-				usage of GroceryTime at this point.
+				I chose to shut down GroceryTime because I&apos;ve had to rededicate my
+				time to my full-time job, life commitments, and other projects. Also, to
+				be transparent, the server that powers the backend of the app was a
+				recurring cost that I could no longer justify given the low usage of
+				GroceryTime at this point.
 			</p>
 
 			<p className="leading-relaxed mb-4">
 				I built GroceryTime in 2020 to learn iOS development, and I&apos;ve
 				really enjoyed the unexpected amount of support along the way - whether
 				it was feedback, tips, or just regular usage from people all over the
-				world, especially the Nordic region. It saddens me to shut the app down,
-				but it&apos;s time.
+				world, especially the Nordic region. It saddens me to have shut the app
+				down, but it was time.
 			</p>
 
 			<h3 className="text-2xl mt-8 mb-4">Looking for alternatives?</h3>
@@ -89,7 +89,7 @@ const Sunset = React.memo(() => (
 			<h3 className="text-2xl mt-8 mb-4">Thank you</h3>
 
 			<p className="leading-relaxed mb-4">
-				To everyone who has used GroceryTime: thank you. An even bigger thanks
+				To everyone who used GroceryTime: thank you. An even bigger thanks
 				if you threw a tip my way or shared the app with someone.
 			</p>
 

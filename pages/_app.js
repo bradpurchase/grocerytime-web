@@ -6,7 +6,6 @@ import { ApolloProvider } from "@apollo/client";
 import { useApollo } from "../lib/apolloClient";
 
 import Footer from "../components/Footer";
-import SunsetBanner from "../components/SunsetBanner";
 
 function App({ Component, pageProps }) {
   const apolloClient = useApollo(pageProps.initialApolloState);
@@ -31,11 +30,6 @@ function App({ Component, pageProps }) {
               />
             )}
         </Head>
-        <SunsetBanner
-          message="GroceryTime is going away on April 15, 2026."
-          href="/sunset"
-          linkLabel="Learn more"
-        />
         <Component {...pageProps} />
         <Footer />
       </div>
