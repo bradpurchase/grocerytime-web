@@ -18,10 +18,7 @@ const Home = React.memo(() => (
 
 			<p className="leading-relaxed mb-4">
 				I chose to shut down GroceryTime because I&apos;ve had to rededicate my
-				time to my full-time job, life commitments, and other projects. Also, to
-				be transparent, the server that powers the backend of the app was a
-				recurring cost that I could no longer justify given the low usage of
-				GroceryTime at this point.
+				time to my full-time job, life commitments, and other projects.
 			</p>
 
 			<p className="leading-relaxed mb-4">
